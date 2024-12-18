@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
     QWidget)
 import resources_rc
 
@@ -637,26 +638,26 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(-1, -1, 20, -1)
-        self.lineEdit = QLineEdit(self.header_widget)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(0, 31))
-        self.lineEdit.setMaximumSize(QSize(16777215, 31))
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.search_anything = QLineEdit(self.header_widget)
+        self.search_anything.setObjectName(u"search_anything")
+        self.search_anything.setMinimumSize(QSize(0, 31))
+        self.search_anything.setMaximumSize(QSize(16777215, 31))
+        self.search_anything.setStyleSheet(u"QLineEdit{\n"
 "padding-left:10px;\n"
 "border: 1px solid gray;\n"
 "border-radius:10px\n"
 "}")
 
-        self.horizontalLayout_3.addWidget(self.lineEdit)
+        self.horizontalLayout_3.addWidget(self.search_anything)
 
-        self.label_6 = QLabel(self.header_widget)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setMinimumSize(QSize(40, 40))
-        self.label_6.setMaximumSize(QSize(40, 40))
-        self.label_6.setPixmap(QPixmap(u":/imgs/profile.png"))
-        self.label_6.setScaledContents(True)
+        self.profile_img = QLabel(self.header_widget)
+        self.profile_img.setObjectName(u"profile_img")
+        self.profile_img.setMinimumSize(QSize(40, 40))
+        self.profile_img.setMaximumSize(QSize(40, 40))
+        self.profile_img.setPixmap(QPixmap(u":/imgs/profile.png"))
+        self.profile_img.setScaledContents(True)
 
-        self.horizontalLayout_3.addWidget(self.label_6)
+        self.horizontalLayout_3.addWidget(self.profile_img)
 
 
         self.horizontalLayout_5.addLayout(self.horizontalLayout_3)
@@ -693,8 +694,188 @@ class Ui_MainWindow(object):
         self.page_3.setObjectName(u"page_3")
         self.label_9 = QLabel(self.page_3)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(360, 170, 491, 231))
-        self.label_9.setFont(font3)
+        self.label_9.setGeometry(QRect(0, 0, 221, 41))
+        font4 = QFont()
+        font4.setFamilies([u"DejaVu Sans Mono"])
+        font4.setPointSize(20)
+        font4.setBold(True)
+        self.label_9.setFont(font4)
+        self.label_19 = QLabel(self.page_3)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setGeometry(QRect(0, 50, 321, 31))
+        font5 = QFont()
+        font5.setFamilies([u"DejaVu Sans Mono"])
+        font5.setPointSize(10)
+        font5.setBold(False)
+        self.label_19.setFont(font5)
+        self.studentInfo_table = QTableWidget(self.page_3)
+        if (self.studentInfo_table.columnCount() < 10):
+            self.studentInfo_table.setColumnCount(10)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.studentInfo_table.setHorizontalHeaderItem(9, __qtablewidgetitem9)
+        self.studentInfo_table.setObjectName(u"studentInfo_table")
+        self.studentInfo_table.setGeometry(QRect(-5, 220, 900, 491))
+        self.studentInfo_table.setMaximumSize(QSize(900, 16777215))
+        self.studentInfo_table.setStyleSheet(u"QHeaderView::section{\n"
+"font-weight:bold;\n"
+"color:white;\n"
+"background-color:black;\n"
+"}\n"
+"QTableWidget{\n"
+"alternate-background-color:#b0edfb;\n"
+"background-color:#f4f9fa;\n"
+"}")
+        self.studentInfo_table.setAlternatingRowColors(True)
+        self.widget1 = QWidget(self.page_3)
+        self.widget1.setObjectName(u"widget1")
+        self.widget1.setGeometry(QRect(10, 90, 441, 43))
+        self.horizontalLayout_6 = QHBoxLayout(self.widget1)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.add_student_btn = QPushButton(self.widget1)
+        self.add_student_btn.setObjectName(u"add_student_btn")
+        self.add_student_btn.setMinimumSize(QSize(0, 41))
+        self.add_student_btn.setMaximumSize(QSize(16777215, 41))
+        self.add_student_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.add_student_btn.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"color:white;\n"
+"border:none;\n"
+"border-radius:8px;\n"
+"font-weight:bold;\n"
+"font-size:12px;\n"
+"}")
+        icon15 = QIcon()
+        icon15.addFile(u":/imgs/add student.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.add_student_btn.setIcon(icon15)
+        self.add_student_btn.setCheckable(True)
+
+        self.horizontalLayout_6.addWidget(self.add_student_btn)
+
+        self.excelExport_btn = QPushButton(self.widget1)
+        self.excelExport_btn.setObjectName(u"excelExport_btn")
+        self.excelExport_btn.setMinimumSize(QSize(0, 41))
+        self.excelExport_btn.setMaximumSize(QSize(16777215, 41))
+        self.excelExport_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.excelExport_btn.setStyleSheet(u"QPushButton{\n"
+"background-color:#34d481;\n"
+"color:white;\n"
+"border:none;\n"
+"border-radius:8px;\n"
+"font-weight:bold;\n"
+"font-size:12px\n"
+"}")
+        icon16 = QIcon()
+        icon16.addFile(u":/imgs/excel.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.excelExport_btn.setIcon(icon16)
+        self.excelExport_btn.setCheckable(True)
+
+        self.horizontalLayout_6.addWidget(self.excelExport_btn)
+
+        self.pdfExport_btn = QPushButton(self.widget1)
+        self.pdfExport_btn.setObjectName(u"pdfExport_btn")
+        self.pdfExport_btn.setMinimumSize(QSize(0, 41))
+        self.pdfExport_btn.setMaximumSize(QSize(16777215, 41))
+        self.pdfExport_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.pdfExport_btn.setStyleSheet(u"QPushButton{\n"
+"background-color:rgb(255,78,78);\n"
+"color:white;\n"
+"border:none;\n"
+"border-radius:8px;\n"
+"font-weight:bold;\n"
+"font-size:12px\n"
+"}")
+        icon17 = QIcon()
+        icon17.addFile(u":/imgs/pdf.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pdfExport_btn.setIcon(icon17)
+        self.pdfExport_btn.setCheckable(True)
+
+        self.horizontalLayout_6.addWidget(self.pdfExport_btn)
+
+        self.widget2 = QWidget(self.page_3)
+        self.widget2.setObjectName(u"widget2")
+        self.widget2.setGeometry(QRect(10, 150, 601, 43))
+        self.horizontalLayout_7 = QHBoxLayout(self.widget2)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.select_gender = QComboBox(self.widget2)
+        self.select_gender.addItem("")
+        self.select_gender.addItem("")
+        self.select_gender.addItem("")
+        self.select_gender.setObjectName(u"select_gender")
+        self.select_gender.setMinimumSize(QSize(150, 0))
+        self.select_gender.setStyleSheet(u"QComboBox{\n"
+"border:2px solid white;\n"
+"border-radius:9px;\n"
+"padding:1px 18px 1px 15px;\n"
+"background-color:black;\n"
+"color:white;\n"
+"height:35px;\n"
+"font-weight:bold;\n"
+"selection-background-color:#2980b9;\n"
+"}")
+
+        self.horizontalLayout_7.addWidget(self.select_gender)
+
+        self.select_class = QComboBox(self.widget2)
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.addItem("")
+        self.select_class.setObjectName(u"select_class")
+        self.select_class.setMinimumSize(QSize(150, 0))
+        self.select_class.setStyleSheet(u"QComboBox{\n"
+"border:2px solid white;\n"
+"border-radius:9px;\n"
+"padding:1px 18px 1px 15px;\n"
+"background-color:black;\n"
+"color:white;\n"
+"height:35px;\n"
+"font-weight:bold;\n"
+"selection-background-color:#2980b9;\n"
+"}")
+
+        self.horizontalLayout_7.addWidget(self.select_class)
+
+        self.search_student = QLineEdit(self.widget2)
+        self.search_student.setObjectName(u"search_student")
+        self.search_student.setMinimumSize(QSize(0, 38))
+        self.search_student.setMaximumSize(QSize(16777215, 38))
+        self.search_student.setStyleSheet(u"QLineEdit{\n"
+"padding-left:10px;\n"
+"border: 1px solid gray;\n"
+"border-radius:10px\n"
+"}")
+
+        self.horizontalLayout_7.addWidget(self.search_student)
+
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
@@ -817,11 +998,54 @@ class Ui_MainWindow(object):
         self.pushButton.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hello Ahmet", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Welcome to your page.", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter keyword for search things...", None))
-        self.label_6.setText("")
+        self.search_anything.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter keyword for search things...", None))
+        self.profile_img.setText("")
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Dashboard", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Institution", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Student Information", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Student Info", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Wellcome to the student information page.", None))
+        ___qtablewidgetitem = self.studentInfo_table.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Student ID", None));
+        ___qtablewidgetitem1 = self.studentInfo_table.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Name", None));
+        ___qtablewidgetitem2 = self.studentInfo_table.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Email", None));
+        ___qtablewidgetitem3 = self.studentInfo_table.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Class", None));
+        ___qtablewidgetitem4 = self.studentInfo_table.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Gender", None));
+        ___qtablewidgetitem5 = self.studentInfo_table.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"DOB", None));
+        ___qtablewidgetitem6 = self.studentInfo_table.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Age", None));
+        ___qtablewidgetitem7 = self.studentInfo_table.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Address", None));
+        ___qtablewidgetitem8 = self.studentInfo_table.horizontalHeaderItem(8)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Phone No", None));
+        ___qtablewidgetitem9 = self.studentInfo_table.horizontalHeaderItem(9)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Actions", None));
+        self.add_student_btn.setText(QCoreApplication.translate("MainWindow", u"Add Student", None))
+        self.excelExport_btn.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
+        self.pdfExport_btn.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
+        self.select_gender.setItemText(0, QCoreApplication.translate("MainWindow", u"SELECT_GENDER", None))
+        self.select_gender.setItemText(1, QCoreApplication.translate("MainWindow", u"Male", None))
+        self.select_gender.setItemText(2, QCoreApplication.translate("MainWindow", u"Female", None))
+
+        self.select_class.setItemText(0, QCoreApplication.translate("MainWindow", u"SELECT_CLASS", None))
+        self.select_class.setItemText(1, QCoreApplication.translate("MainWindow", u"Grade_1", None))
+        self.select_class.setItemText(2, QCoreApplication.translate("MainWindow", u"Grade_2", None))
+        self.select_class.setItemText(3, QCoreApplication.translate("MainWindow", u"Grade_3", None))
+        self.select_class.setItemText(4, QCoreApplication.translate("MainWindow", u"Grade_4", None))
+        self.select_class.setItemText(5, QCoreApplication.translate("MainWindow", u"Grade_5", None))
+        self.select_class.setItemText(6, QCoreApplication.translate("MainWindow", u"Grade_6", None))
+        self.select_class.setItemText(7, QCoreApplication.translate("MainWindow", u"Grade_7", None))
+        self.select_class.setItemText(8, QCoreApplication.translate("MainWindow", u"Grade_8", None))
+        self.select_class.setItemText(9, QCoreApplication.translate("MainWindow", u"Grade_9", None))
+        self.select_class.setItemText(10, QCoreApplication.translate("MainWindow", u"Grade_10", None))
+        self.select_class.setItemText(11, QCoreApplication.translate("MainWindow", u"Grade_11", None))
+        self.select_class.setItemText(12, QCoreApplication.translate("MainWindow", u"Grade_12", None))
+
+        self.search_student.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search student...", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Student Payment", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Student Trans", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Teacher Info", None))
