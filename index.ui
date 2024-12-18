@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -82,7 +82,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="../kara_oglan/imgs/resources.qrc">:/logo.png</pixmap>
+             <pixmap resource="resources.qrc">:/imgs/logo.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -127,9 +127,10 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
-              <normaloff>:/dashboardsmall1.png</normaloff>
-              <normalon>:/dashboardsmall2.png</normalon>:/dashboardsmall1.png</iconset>
+             <iconset resource="resources.qrc">
+              <normaloff>:/imgs/dashboardsmall1.png</normaloff>
+              <normalon>:/imgs/dashboardsmall1.png</normalon>
+              <disabledoff>:/imgs/dashboardsmall2.png</disabledoff>:/imgs/dashboardsmall1.png</iconset>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -151,7 +152,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/institutionsmall1.png</normaloff>
               <normalon>:/institutionsmall2.png</normalon>:/institutionsmall1.png</iconset>
             </property>
@@ -181,7 +182,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/studentssmall1.png</normaloff>
               <normalon>:/studentssmall2.png</normalon>:/studentssmall1.png</iconset>
             </property>
@@ -211,7 +212,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/teacs.png</normaloff>
               <normalon>:/teacherssmall2.png</normalon>:/teacs.png</iconset>
             </property>
@@ -241,7 +242,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/financessmall1.png</normaloff>
               <normalon>:/financessmall2.png</normalon>:/financessmall1.png</iconset>
             </property>
@@ -291,7 +292,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/settingssmall1.png</normaloff>
               <normalon>:/settingssmall2.png</normalon>:/settingssmall1.png</iconset>
             </property>
@@ -321,7 +322,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/signoutsmall1.png</normaloff>
               <normalon>:/signoutsmall2.png</normalon>:/signoutsmall1.png</iconset>
             </property>
@@ -384,7 +385,7 @@ border:none
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="../kara_oglan/imgs/resources.qrc">:/logo.png</pixmap>
+             <pixmap>:/logo.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -434,7 +435,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/dashboard2.png</normaloff>
               <normalon>:/dashboard1.png</normalon>:/dashboard2.png</iconset>
             </property>
@@ -471,7 +472,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/institution2.png</normaloff>
               <normalon>:/institution1.png</normalon>:/institution2.png</iconset>
             </property>
@@ -525,7 +526,7 @@ border-radius:3px;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../kara_oglan/imgs/resources.qrc">
+                <iconset>
                  <normaloff>:/students3.png</normaloff>
                  <normalon>:/students4.png</normalon>:/students3.png</iconset>
                </property>
@@ -660,7 +661,7 @@ cursor:pointer
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../kara_oglan/imgs/resources.qrc">
+                <iconset>
                  <normaloff>:/teachers3.png</normaloff>
                  <normalon>:/teachers4.png</normalon>:/teachers3.png</iconset>
                </property>
@@ -795,7 +796,7 @@ cursor:pointer
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../kara_oglan/imgs/resources.qrc">
+                <iconset>
                  <normaloff>:/finances3.png</normaloff>
                  <normalon>:/finances4.png</normalon>:/finances3.png</iconset>
                </property>
@@ -936,7 +937,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/settings2.png</normaloff>
               <normalon>:/settings1.png</normalon>:/settings2.png</iconset>
             </property>
@@ -973,7 +974,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../kara_oglan/imgs/resources.qrc">
+             <iconset>
               <normaloff>:/signout2.png</normaloff>
               <normalon>:/signout1.png</normalon>:/signout2.png</iconset>
             </property>
@@ -1020,8 +1021,8 @@ border:none
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../kara_oglan/imgs/resources.qrc">
-                <normaloff>:/menu.png</normaloff>:/menu.png</iconset>
+               <iconset resource="resources.qrc">
+                <normaloff>:/imgs/logo.png</normaloff>:/imgs/logo.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -1139,7 +1140,7 @@ border-radius:10px;
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap resource="../kara_oglan/imgs/resources.qrc">:/profile.png</pixmap>
+               <pixmap>:/profile.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -1430,7 +1431,7 @@ border-radius:10px;
   </widget>
  </widget>
  <resources>
-  <include location="../kara_oglan/imgs/resources.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections>
   <connection>
