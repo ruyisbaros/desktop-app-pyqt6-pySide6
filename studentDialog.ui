@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentsDialog</class>
+ <widget class="QDialog" name="StudentsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>548</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background-color:white;
+}
+
+QLineEdit{
+border:1px solid gray;
+border-radius:6px;
+padding-left:10px;
+height:35px;
+}
+QDateEdit{
+border:1px solid gray;
+border-radius:6px;
+padding-left:10px;
+height:31px;
+}
+QComboBox{
+border:2px solid white;
+border-radius:9px;
+padding:1px 18px 1px 15px;
+background-color:black;
+color:white;
+height:35px;
+font-weight:bold;
+selection-background-color:#2980b9;
+}</string>
+  </property>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>551</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>16</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans Mono</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add New Student</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>531</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="full_name">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Full Name</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="name_lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>DejaVu Sans Mono</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Gender</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="gender_comboBox">
+          <item>
+           <property name="text">
+            <string>Male</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Female</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>DejaVu Sans Mono</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Class</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="class_comboBox">
+          <item>
+           <property name="text">
+            <string>Grade_1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_5</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_6</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_7</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_8</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_9</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_10</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_11</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grade_12</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <family>DejaVu Sans Mono</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Date of Birth</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dob_comboBox"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="full_name_2">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="email_lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="full_name_3">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Address</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="address_lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="full_name_4">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Phone Number</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="phone_lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>510</y>
+     <width>251</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="save_student_btn">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#34d481;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+font-size:15px
+}</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cancel_add_student_btn">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:red;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+font-size:15px
+}</string>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancel_add_student_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>StudentsDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>594</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
