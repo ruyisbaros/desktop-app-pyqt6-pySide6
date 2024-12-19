@@ -17,7 +17,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
                            QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDialog,
                                QFrame, QHBoxLayout, QLabel, QLineEdit,
-                               QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+                               QPushButton, QSizePolicy, QVBoxLayout, QWidget, QMessageBox)
+
+import mysql.connector
+import random
+from datetime import datetime
 
 
 class Ui_StudentsDialog(QDialog):
@@ -253,6 +257,7 @@ class Ui_StudentsDialog(QDialog):
         self.cancel_add_student_btn.toggled.connect(self.close)
 
         QMetaObject.connectSlotsByName(self)
+
     # setupUi
 
     def retranslateUi(self, StudentsDialog):
@@ -309,3 +314,97 @@ class Ui_StudentsDialog(QDialog):
         self.cancel_add_student_btn.setText(
             QCoreApplication.translate("StudentsDialog", u"Cancel", None))
     # retranslateUi
+    # when press add student button popup dialog
+        self.save_student_btn.clicked.connect(self.add_student_box)
+        self.cancel_add_student_btn.clicked.connect(self.close)
+    # DB CONNECTION
+
+    def create_connection(self):
+        db_name = "my_school_database"
+        self.mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+        )
+        cursor = self.mydb.cursor()
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
+
+        self.mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database=db_name
+        )
+        return self.mydb
+
+    # ADD STUDENT
+    def add_student(self):
+        names = self.name_lineEdit.text()
+        gender = self.gender_comboBox.currentText()
+        student_id = self.generate_student_id(gender)
+        grade = self.class_comboBox.currentText()
+        birthday = self.dob_comboBox.date().toString(Qt.ISODate)  # Qt.ISODate
+        age = self.calculate_age(birthday)
+        email = self.email_lineEdit.text()
+        address = self.address_lineEdit.text()
+        phone_number = self.phone_lineEdit.text()
+
+        if not student_id or not names or not gender or not grade or not birthday or not email or not address or not phone_number:
+            QMessageBox.critical(self, "Error", "All fields are required!")
+            return
+
+        cursor = self.create_connection().cursor()
+        cursor.execute(
+            "INSERT INTO students (student_id, names, gender, grade, birthday, email, address, phone_number, age) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s)",
+            (student_id, names, gender, grade, birthday,
+             email, address, phone_number, age)
+        )
+        self.mydb.commit()
+        QMessageBox.information(self, "Success", "Student added successfully!")
+        self.clear_fields()
+        self.mydb.close()
+
+    # GENERATE STUDENT ID
+    def generate_student_id(self, gender):
+        cursor = self.create_connection().cursor()
+        while True:
+            if gender == "Male":
+                id_start_value = '24' + '/U/M'
+            else:
+                id_start_value = '24' + '/U/F'
+
+            student_id = id_start_value + '04d' + random.randint(1, 1000)
+            cursor.execute(
+                f"SELECT student_id FROM students WHERE student_id = '{student_id}'")
+            if not cursor.fetchone():
+                return student_id
+
+    def handleDateFormat(self):
+        dob = self.dob_comboBox.date().toString("yyyy-MM-dd")
+        self.dob_label.setText(dob)
+
+    # CALCULATE AGE
+    def calculate_age(self, birthday):
+        current_date = datetime.now()
+        birth_date = datetime.strptime(birthday, "%Y-%m-%d")
+        age = current_date.year - birth_date.year - \
+            ((current_date.month, current_date.day)
+             < (birth_date.month, birth_date.day))
+        return age
+
+    # CLEAR FIELDS
+    def clear_fields(self):
+        self.name_lineEdit.clear()
+        self.gender_comboBox.setCurrentIndex(0)
+        self.class_comboBox.setCurrentIndex(0)
+        self.dob_label.clear()
+        self.email_lineEdit.clear()
+        self.address_lineEdit.clear()
+        self.phone_lineEdit.clear()
+
+    def show_custom_message(self):
+        msg_box = QMessageBox(self)
+
+    def add_student_box(self):
+        self.add_student()
+        self.accept()

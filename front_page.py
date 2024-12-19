@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QMenu
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QAction
+import mysql.connector
 
 from ui_index import Ui_MainWindow
 
@@ -48,6 +49,11 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.student_1.clicked.connect(self.show_student_context_menu)
         self.teachers_1.clicked.connect(self.show_teacher_context_menu)
         self.finance_1.clicked.connect(self.show_finance_context_menu)
+
+        # Trigger database connection
+        self.create_connection()
+        # Create tables
+        self.create_tables()
     # switch between stack pages
 
     def switch_to_dashboard_page(self):
@@ -140,3 +146,51 @@ class MySideBar(QMainWindow, Ui_MainWindow):
             self.switch_to_expenses_page()
         elif text == "Business Overview":
             self.switch_to_businessOverview_page()
+
+    # CREATE DATABASE CONNECTION
+    def create_connection(self):
+        db_name = "my_school_database"
+        self.mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+        )
+        cursor = self.mydb.cursor()
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
+
+        self.mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database=db_name
+        )
+        return self.mydb
+
+    # CREATE TABLES
+    def create_tables(self):
+        cursor = self.mydb.cursor()
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS students (
+                student_id TEXT PRIMARY KEY,
+                names TEXT NOT NULL,
+                email TEXT NOT NULL,
+                gender TEXT NOT NULL,
+                birthday TEXT NOT NULL,
+                address TEXT NOT NULL,
+                phone_number TEXT NOT NULL,
+                age INT ,
+                grade TEXT NOT NULL
+            );
+        """)
+
+        self.mydb.commit()
+        print("Tables created successfully")
+        self.mydb.close()
+
+    def open_create_student_dialog(self):
+        from studentDialog import Ui_StudentsDialog
+        dialog = Ui_StudentsDialog(self)
+        result = dialog.exec()
+
+        if result == Ui_StudentsDialog.accepted:
+            pass
