@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -78,7 +78,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources.qrc">:/imgs/logo.png</pixmap>
+             <pixmap>:/imgs/logo.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -120,7 +120,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/dashboardsmall1.png</normaloff>
               <normalon>:/imgs/dashboardsmall2.png</normalon>:/imgs/dashboardsmall1.png</iconset>
             </property>
@@ -141,7 +141,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/institutionsmall1.png</normaloff>
               <normalon>:/imgs/institutionsmall2.png</normalon>:/imgs/institutionsmall1.png</iconset>
             </property>
@@ -168,7 +168,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/studentssmall1.png</normaloff>
               <normalon>:/imgs/studentssmall2.png</normalon>:/imgs/studentssmall1.png</iconset>
             </property>
@@ -195,7 +195,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/teacs.png</normaloff>
               <normalon>:/imgs/teacherssmall2.png</normalon>:/imgs/teacs.png</iconset>
             </property>
@@ -222,7 +222,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/financessmall1.png</normaloff>
               <normalon>:/imgs/financessmall2.png</normalon>:/imgs/financessmall1.png</iconset>
             </property>
@@ -269,7 +269,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/settingssmall1.png</normaloff>
               <normalon>:/imgs/settingssmall2.png</normalon>:/imgs/settingssmall1.png</iconset>
             </property>
@@ -296,7 +296,7 @@ border-radius:3px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/signoutsmall1.png</normaloff>
               <normalon>:/imgs/signoutsmall2.png</normalon>:/imgs/signoutsmall1.png</iconset>
             </property>
@@ -359,7 +359,7 @@ border:none;
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources.qrc">:/imgs/logo.png</pixmap>
+             <pixmap>:/imgs/logo.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -410,7 +410,7 @@ border-radius:4px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/dashboard2.png</normaloff>
               <normalon>:/imgs/dashboard1.png</normalon>:/imgs/dashboard2.png</iconset>
             </property>
@@ -448,7 +448,7 @@ border-radius:4px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/institution2.png</normaloff>
               <normalon>:/imgs/institution1.png</normalon>:/imgs/institution2.png</iconset>
             </property>
@@ -509,7 +509,7 @@ padding-left:-0px;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/students3.png</normaloff>
                  <normalon>:/imgs/students4.png</normalon>:/imgs/students3.png</iconset>
                </property>
@@ -658,7 +658,7 @@ padding-left:-2px;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/teachers3.png</normaloff>
                  <normalon>:/imgs/teachers4.png</normalon>:/imgs/teachers3.png</iconset>
                </property>
@@ -802,7 +802,7 @@ padding-left:5px;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/finances3.png</normaloff>
                  <normalon>:/imgs/finances4.png</normalon>:/imgs/finances3.png</iconset>
                </property>
@@ -947,7 +947,7 @@ border-radius:4px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/settings2.png</normaloff>
               <normalon>:/imgs/settings1.png</normalon>:/imgs/settings2.png</iconset>
             </property>
@@ -985,7 +985,7 @@ border-radius:4px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/imgs/signout2.png</normaloff>
               <normalon>:/imgs/signout1.png</normalon>:/imgs/signout2.png</iconset>
             </property>
@@ -1041,7 +1041,7 @@ border:none;
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
+               <iconset>
                 <normaloff>:/imgs/menu.png</normaloff>:/imgs/menu.png</iconset>
               </property>
               <property name="iconSize">
@@ -1161,7 +1161,7 @@ border-radius:10px
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap resource="resources.qrc">:/imgs/profile.png</pixmap>
+               <pixmap>:/imgs/profile.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -1366,7 +1366,7 @@ background-color:#f4f9fa;
              </property>
             </column>
            </widget>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>10</x>
@@ -1407,7 +1407,7 @@ font-size:12px;
                 <string>Add Student</string>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/add student.png</normaloff>:/imgs/add student.png</iconset>
                </property>
                <property name="checkable">
@@ -1446,7 +1446,7 @@ font-size:12px
                 <string>Export to Excel</string>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/excel.png</normaloff>:/imgs/excel.png</iconset>
                </property>
                <property name="checkable">
@@ -1485,7 +1485,7 @@ font-size:12px
                 <string>Export to PDF</string>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset>
                  <normaloff>:/imgs/pdf.png</normaloff>:/imgs/pdf.png</iconset>
                </property>
                <property name="checkable">
@@ -1495,7 +1495,7 @@ font-size:12px
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>10</x>
